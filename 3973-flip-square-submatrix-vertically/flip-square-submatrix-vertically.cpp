@@ -3,8 +3,9 @@ public:
     vector<vector<int>> reverseSubmatrix(vector<vector<int>>& grid, int x, int y, int k) {
             int col = y+k-1;
             int row = x+k-1;
-            while(y <= col) {
-                int c = y;
+            int cl = y;
+            while(cl <= col) {
+                int c = cl;
                 int r = x;
                 int t = row;
                 while(r < t) {
@@ -12,7 +13,7 @@ public:
                     r++;
                     t--;
                 }
-                y++;
+                cl++;
             }
 
         return grid;
